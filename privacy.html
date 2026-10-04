@@ -1,34 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for vps-nai-gdrive-backup.">
+  <meta name="robots" content="index,follow">
+  <title>Privacy Policy — vps-nai-gdrive-backup</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --border: #dadce0;
+      --accent: #1a73e8;
+      --accent-soft: #e8f0fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main { width: min(900px, calc(100% - 32px)); margin: 40px auto; }
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: clamp(28px, 5vw, 52px);
+      box-shadow: 0 6px 24px rgba(60, 64, 67, 0.08);
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    .updated { color: var(--muted); margin-top: 0; }
+    h2 { margin: 34px 0 10px; font-size: 1.35rem; line-height: 1.3; }
+    p { margin: 10px 0; }
+    ul { padding-left: 22px; margin: 10px 0; }
+    li { margin: 7px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .notice {
+      margin-top: 22px;
+      padding: 16px 18px;
+      background: var(--accent-soft);
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #202124;
+        --card: #292a2d;
+        --text: #e8eaed;
+        --muted: #bdc1c6;
+        --border: #3c4043;
+        --accent: #8ab4f8;
+        --accent-soft: #303f5f;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
+  <main>
+    <article>
+      <h1>Privacy Policy</h1>
+      <p class="updated">
+        <strong>Application:</strong> vps-nai-gdrive-backup<br>
+        <strong>Last updated:</strong> October 5, 2026
+      </p>
 
-    <p>
-        This application is used solely for personal access to
-        Google Drive through rclone.
-    </p>
+      <p>
+        This Privacy Policy explains how vps-nai-gdrive-backup handles Google
+        user data when the application is used with rclone to back up files
+        from a personal VPS server to the owner's Google Drive account.
+      </p>
 
-    <p>
-        This application does not sell, rent, or share personal
-        information with third parties.
-    </p>
+      <div class="notice">
+        <strong>Personal-use application.</strong> vps-nai-gdrive-backup is not
+        a public storage service and does not provide Google Drive backup
+        services to other users.
+      </div>
 
-    <p>
-        Google Drive data is accessed only for file synchronization
-        and file management by the owner.
-    </p>
+      <h2>1. Google user data accessed</h2>
+      <p>
+        Depending on the owner's rclone configuration and the Google Drive
+        operations being performed, the application may access:
+      </p>
+      <ul>
+        <li>Google Drive file and folder names and metadata.</li>
+        <li>Google Drive file contents that the owner chooses to back up, restore, synchronize, or manage.</li>
+        <li>Authorization information required for Google OAuth 2.0 access to the Google Drive API.</li>
+      </ul>
+      <p>
+        The application does not intentionally request unrelated Google
+        services or personal information that is not needed for the configured
+        backup workflow.
+      </p>
 
-    <p>
-        OAuth credentials are used only to authenticate the owner's
-        Google Drive account.
-    </p>
+      <h2>2. How Google user data is used</h2>
+      <p>
+        Google user data is used only to provide the functionality requested by
+        the owner, including uploading, downloading, listing, synchronizing,
+        and managing files in the owner's Google Drive as configured through
+        rclone.
+      </p>
+      <p>
+        The application does not use Google user data for advertising,
+        profiling, credit decisions, or any unrelated commercial purpose.
+      </p>
 
-    <p>
-        This application is not intended for use by the general public.
-    </p>
+      <h2>3. How Google user data is stored</h2>
+      <p>
+        The website hosting this policy is a static GitHub Pages site. It does
+        not receive or store the owner's Google Drive files.
+      </p>
+      <p>
+        When rclone is configured for Google Drive, OAuth credentials or tokens
+        may be stored in rclone's local configuration on the owner's VPS or
+        other environment where rclone is running. That local credential
+        storage is controlled by the owner and is not stored by this website.
+      </p>
+
+      <h2>4. Sharing and transfer</h2>
+      <p>
+        vps-nai-gdrive-backup does not sell, rent, or share Google user data
+        with advertisers, data brokers, information resellers, or other third
+        parties for their independent use.
+      </p>
+      <p>
+        The application does not transfer Google user data for targeted
+        advertising, personalized advertising, retargeted advertising, or
+        credit-worthiness or lending purposes.
+      </p>
+      <p>
+        Google user data is not used to develop, improve, or train generalized
+        or non-personalized artificial intelligence or machine-learning models.
+      </p>
+
+      <h2>5. AI NCII</h2>
+      <p>
+        This application does not use Google APIs to create, generate,
+        distribute, or facilitate AI-generated non-consensual intimate imagery
+        (AI NCII).
+      </p>
+
+      <h2>6. Third-party services</h2>
+      <p>
+        The backup workflow uses Google APIs and rclone. Google processes data
+        under Google's applicable policies and terms. rclone is the client used
+        by the owner to perform the configured Google Drive operations.
+      </p>
+      <p>
+        This privacy-policy website does not add an analytics, advertising, or
+        tracking service of its own.
+      </p>
+
+      <h2>7. Data retention and deletion</h2>
+      <p>
+        This website does not maintain a server-side copy of the owner's
+        Google Drive data. Backup copies stored in Google Drive remain there
+        until the owner deletes them or changes the backup configuration.
+      </p>
+      <p>
+        The owner can revoke this application's Google account access through
+        their Google Account settings. The owner can also remove the local
+        rclone configuration and locally stored authorization data from the
+        VPS.
+      </p>
+
+      <h2>8. Security</h2>
+      <p>
+        This application is intended for personal use. The owner is responsible
+        for securing the VPS, rclone configuration, OAuth credentials, and any
+        backup data stored on the VPS or in Google Drive.
+      </p>
+
+      <h2>9. Children's privacy</h2>
+      <p>
+        This application is not directed to children and is not intended for
+        general public use.
+      </p>
+
+      <h2>10. Changes to this policy</h2>
+      <p>
+        This policy may be updated when the application's actual data practices
+        change. The current version is published at this URL and includes the
+        revision date above.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        Developer and repository owner:
+        <a href="https://github.com/xiyunyunyun">xiyunyunyun</a>.
+      </p>
+      <p>
+        Public source repository:
+        <a href="https://github.com/xiyunyunyun/google-oauth-pages">github.com/xiyunyunyun/google-oauth-pages</a>.
+      </p>
+
+      <footer>
+        <p>
+          This policy is intended to describe the actual personal-use data
+          handling of vps-nai-gdrive-backup and should be kept synchronized
+          with the application's real configuration and behavior.
+        </p>
+        <p><a href="index.html">Back to application homepage</a></p>
+      </footer>
+    </article>
+  </main>
 </body>
 </html>
