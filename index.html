@@ -1,19 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Google Drive Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="vps-nai-gdrive-backup is a personal VPS backup utility that uses Google Drive API through rclone to store backups in the owner's Google Drive account.">
+  <meta name="robots" content="index,follow">
+  <title>vps-nai-gdrive-backup</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --border: #dadce0;
+      --accent: #1a73e8;
+      --accent-soft: #e8f0fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main { width: min(900px, calc(100% - 32px)); margin: 56px auto; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: clamp(28px, 5vw, 52px);
+      box-shadow: 0 6px 24px rgba(60, 64, 67, 0.08);
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+    h2 { margin: 36px 0 10px; font-size: 1.35rem; line-height: 1.3; }
+    p { margin: 10px 0; }
+    .lead { margin-top: 0; color: var(--muted); font-size: 1.08rem; }
+    .notice {
+      margin-top: 24px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 8px;
+    }
+    ul { padding-left: 22px; margin: 10px 0; }
+    li { margin: 7px 0; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 32px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #202124;
+        --card: #292a2d;
+        --text: #e8eaed;
+        --muted: #bdc1c6;
+        --border: #3c4043;
+        --accent: #8ab4f8;
+        --accent-soft: #303f5f;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Personal Google Drive Application</h1>
+  <main>
+    <article class="card">
+      <h1>vps-nai-gdrive-backup</h1>
+      <p class="lead">
+        A personal VPS backup utility that uses the Google Drive API through
+        rclone to store backups in the owner's Google Drive account.
+      </p>
 
-    <p>
-        This application is used for personal access to Google Drive
-        through rclone.
-    </p>
+      <div class="notice">
+        <strong>Personal use:</strong> This application is operated for the
+        owner's own backup workflow. It is not a public cloud storage service,
+        does not provide accounts to third parties, and does not sell or
+        monetize Google user data.
+      </div>
 
-    <p>
-        <a href="privacy.html">Privacy Policy</a>
-    </p>
+      <h2>Purpose</h2>
+      <p>
+        vps-nai-gdrive-backup is used to back up files from a VPS server to
+        Google Drive. The application provides the OAuth identity and privacy
+        information required for an authorized connection between the owner's
+        rclone installation and the owner's Google Drive account.
+      </p>
+
+      <h2>How it works</h2>
+      <ol>
+        <li>The owner configures rclone on the VPS.</li>
+        <li>The owner authorizes access to their Google account through Google OAuth 2.0.</li>
+        <li>rclone uses the resulting authorization to perform the Google Drive operations needed for backup and synchronization.</li>
+        <li>Backup files are stored in the owner's Google Drive account.</li>
+      </ol>
+
+      <h2>Google user data</h2>
+      <p>
+        Depending on the owner's rclone configuration, the backup workflow may
+        access Google Drive file and folder metadata and the contents of files
+        that the owner chooses to back up, restore, synchronize, or manage.
+      </p>
+      <p>
+        This static website does not itself receive, store, or sell the
+        owner's Google Drive files. OAuth credentials and tokens used by rclone
+        are handled by the owner's rclone installation and local environment.
+      </p>
+
+      <h2>Data use and sharing</h2>
+      <ul>
+        <li>Google user data is used only to provide the requested backup and file-management functionality.</li>
+        <li>Google user data is not sold, rented, or used for targeted advertising.</li>
+        <li>Google user data is not provided to data brokers or information resellers for their independent use.</li>
+        <li>Google user data is not used to determine credit-worthiness, lending eligibility, or similar financial decisions.</li>
+        <li>Google user data is not used to develop, improve, or train generalized or non-personalized AI/ML models.</li>
+      </ul>
+
+      <h2>AI NCII statement</h2>
+      <p>
+        This application does not use Google APIs to create, generate,
+        distribute, or facilitate AI-generated non-consensual intimate imagery
+        (AI NCII).
+      </p>
+
+      <h2>Privacy policy</h2>
+      <p>
+        Read the full privacy policy here:
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+
+      <h2>Developer</h2>
+      <p>
+        Developer and repository owner:
+        <a href="https://github.com/xiyunyunyun">xiyunyunyun</a>.
+      </p>
+
+      <footer>
+        <p>Last updated: October 5, 2026</p>
+      </footer>
+    </article>
+  </main>
 </body>
 </html>
